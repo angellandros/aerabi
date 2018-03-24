@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Fraktur;
+    src: url("GebetbuchFraktur.ttf");
+}
+
+h1, h2 {
+	font-family: Fraktur, cursive;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+h3 {
+	font-family: 'UnifrakturMaguntia', cursive;
+}
+
+.container-fluid {
+	padding: 10px 50px 10px 50px;
+}
+
+p {
+	font-family: 'UnifrakturMaguntia', cursive;
+	font-size: 16pt;
+}
+
+.jumbotron {
+	background-color: #663399;
+	color: #ffffff;
+}
+
+.jumbotron p {
+    font-family: 'Ubuntu Mono', monospac !important;
+}
+
+.code {
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+.glyphicon {
+    color: #663399;
+    font-size: 30px;
+}
+
+.bg-purple {
+	background-color: #dbd7ff !important;
+	color: #663399;
+}
