@@ -46,3 +46,13 @@ p {
 	background-color: #dbd7ff !important;
 	color: #663399;
 }
+
+footer {
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #663399;
+}
