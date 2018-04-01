@@ -20,6 +20,38 @@ a {
     text-decoration: none;
 }
 
+.navbar {
+    background-color: #9370db;
+    color: #ffffff !important;
+    font-family: 'UnifrakturMaguntia', cursive;
+    border: 0;
+    z-index: 9999;
+    margin-bottom: 0;
+    font-size: 16px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.logo {
+    font-family: Fraktur, cursive;
+    font-size: 24px !important;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #663399 !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
 .more {
     font-family: 'UnifrakturMaguntia', cursive;
     text-align: right;
@@ -38,6 +70,7 @@ p {
 .jumbotron {
 	background-color: #663399;
 	color: #ffffff;
+	margin-top: 40px;
 }
 
 .jumbotron p {
