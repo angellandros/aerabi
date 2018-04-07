@@ -25,7 +25,9 @@ SECRET_KEY = ')*tyuk01hr_7%vbv1(z&nxb$xh*n*_i#w_3ji*2v^!ww+vub=k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'aerabi.com',
+]
 
 
 # Application definition
