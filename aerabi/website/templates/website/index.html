@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Mohammad-Ali A'RÂBI</title>
+  <title>{% block title %}Mohammad-Ali A'RÂBI{% endblock %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,24 +24,27 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#abhandlungen">About</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="#cv">Curriculum Vitæ</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+        <li><a href="">Curriculum Vitæ</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="jumbotron text-center">
-  <h1>Mohammad-Ali Aerâbi</h1>
-  <p>researcher | software developer</p>
+<div class="jumbotron text-center" id="top">
+  <h1>{% block h1 %}Mohammad-Ali Aerâbi{% endblock %}</h1>
+  <p>{% block subtitle %}researcher | software developer{% endblock %}</p>
 </div>
 <div class="container-fluid text-center" id="summary">
   <p>
-	Veniet tempus, quo ista quae nunc latent, in lucem dies extrahat et longioris aevi diligentia
+	{% block quote %}
+    Veniet tempus, quo ista quae nunc latent, in lucem dies extrahat et longioris aevi diligentia
+    {% endblock %}
   </p>
 </div>
 
+{% block contents %}
 <div class="container-fluid text-center">
   <a href="#"><h2>Logisch-Mathematische Abhandlungen</h2></a>
   <div class="row text-justify">
@@ -68,9 +71,10 @@
     </div>
   </div>
 </div>
+{% endblock %}
 
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
+  <a href="#top" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p>Created by Mohammad-Ali Aerâbi</p>
