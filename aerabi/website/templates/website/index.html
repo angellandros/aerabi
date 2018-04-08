@@ -20,13 +20,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><span class="logo">Aerâbi</span></a>
+      <a class="navbar-brand" href="{% url 'index' %}"><span class="logo">Aerâbi</span></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li {% block class-navbar-about %}{% endblock %}><a href="{% url 'about' %}">About</a></li>
         <li {% block class-navbar-blog %}{% endblock %}><a href="{% url 'blog' %}">Blog</a></li>
-        <li {% block class-navbar-cv %}{% endblock %}><a href="">Curriculum Vitæ</a></li>
+        <li {% block class-navbar-cv %}{% endblock %}><a href="{% url 'cv' %}">Curriculum Vitæ</a></li>
       </ul>
     </div>
   </div>

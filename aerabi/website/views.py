@@ -6,13 +6,21 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'website/about.html')
+    from .models import Page
+    page = Page.objects.get(url='about')
+    return render(request, 'website/about.html', context={'page': page})
 
 
 def blog(request):
     from .models import BlogPost
     posts = BlogPost.objects.all()
     return render(request, 'website/blog.html', context={'posts': posts})
+
+
+def cv(request):
+    from .models import Page
+    page = Page.objects.get(url='cv')
+    return render(request, 'website/cv.html', context={'page': page})
 
 
 def post(request, url):

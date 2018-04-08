@@ -8,3 +8,8 @@ class BlogPost(models.Model):
     location = models.CharField(max_length=200)
     title = models.CharField(max_length=100)
     url = models.CharField(max_length=100, db_index=True, unique=True)
+
+
+class Page(models.Model):
+    url = models.CharField(max_length=100, db_index=True, unique=True)
+    text = models.TextField()
