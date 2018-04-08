@@ -13,3 +13,9 @@ def blog(request):
     from .models import BlogPost
     posts = BlogPost.objects.all()
     return render(request, 'website/blog.html', context={'posts': posts})
+
+
+def post(request, url):
+    from .models import BlogPost
+    the_post = BlogPost.objects.get(url=url)
+    return render(request, 'website/blog_post.html', context={'post': the_post})

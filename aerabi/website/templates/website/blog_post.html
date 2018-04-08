@@ -1,0 +1,17 @@
+{% extends "website/blog.html" %}
+
+{% block title %}{{ post.title }} | Blog of Mohammad-Ali A'RÂBI{% endblock %}
+
+{% block contents %}
+<div class="container-fluid text-center">
+  <h2>{{ post.title }}</h2>
+  <div class="row text-justify">
+    <div class="col-sm-12">
+      <p>{% autoescape off %}{{ post.text }}{% endautoescape %}</p>
+      <div class="more">
+        <p>{{ post.location }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

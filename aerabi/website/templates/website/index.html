@@ -24,9 +24,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'blog' %}">Blog</a></li>
-        <li><a href="">Curriculum Vitæ</a></li>
+        <li {% block class-navbar-about %}{% endblock %}><a href="{% url 'about' %}">About</a></li>
+        <li {% block class-navbar-blog %}{% endblock %}><a href="{% url 'blog' %}">Blog</a></li>
+        <li {% block class-navbar-cv %}{% endblock %}><a href="">Curriculum Vitæ</a></li>
       </ul>
     </div>
   </div>
