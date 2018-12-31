@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia" rel="stylesheet">
   <link rel="stylesheet" href="http://aerabi.com/style/style.css">
@@ -24,8 +25,8 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li {% block class-navbar-about %}{% endblock %}><a href="{% url 'about' %}">About</a></li>
-        <li {% block class-navbar-blog %}{% endblock %}><a href="{% url 'blog' %}">Blog</a></li>
+        <li {% block class-navbar-blog %}{% endblock %}><a href="{% url 'blog' %}">Abhandlungen</a></li>
+        <li {% block class-navbar-about %}{% endblock %}><a href="{% url 'works' %}">Betrieb</a></li>
         <li {% block class-navbar-cv %}{% endblock %}><a href="{% url 'cv' %}">Curriculum Vitæ</a></li>
       </ul>
     </div>
@@ -34,7 +35,7 @@
 
 <div class="jumbotron text-center" id="top">
   <h1>{% block h1 %}Mohammad-Ali Aerâbi{% endblock %}</h1>
-  <p>{% block subtitle %}researcher | software developer{% endblock %}</p>
+  <p>{% block subtitle %}The Zuhauseseite and Lebenslauf{% endblock %}</p>
 </div>
 <div class="container-fluid text-center" id="summary">
   <p>
@@ -45,32 +46,7 @@
 </div>
 
 {% block contents %}
-<div class="container-fluid text-center">
-  <a href="#"><h2>Logisch-Mathematische Abhandlungen</h2></a>
-  <div class="row text-justify">
-    <div class="col-sm-4">
-      <h3>Aquarium</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="more">
-        <a href="#">mehr...</a>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <h3>Aquarium</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="more">
-        <a href="#">mehr...</a>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <h3>Aquarium</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="more">
-        <a href="#">mehr...</a>
-      </div>
-    </div>
-  </div>
-</div>
+{% autoescape off %}{{ page.text }}{% endautoescape %}
 {% endblock %}
 
 <footer class="container-fluid text-center">

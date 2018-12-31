@@ -2,7 +2,9 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'website/index.html')
+    from .models import Page
+    page = Page.objects.get(url='index')
+    return render(request, 'website/index.html', context={'page': page})
 
 
 def about(request):
@@ -27,3 +29,9 @@ def post(request, url):
     from .models import BlogPost
     the_post = BlogPost.objects.get(url=url)
     return render(request, 'website/blog_post.html', context={'post': the_post})
+
+
+def works(request):
+    from .models import Page
+    page = Page.objects.get(url='works')
+    return render(request, 'website/works.html', context={'page': page})
