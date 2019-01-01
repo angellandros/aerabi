@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{% block title %}Mohammad-Ali A'RÂBI{% endblock %}</title>
+  <title>{% block title %}{{ page.html_title }}{% endblock %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,13 +34,13 @@
 </nav>
 
 <div class="jumbotron text-center" id="top">
-  <h1>{% block h1 %}Mohammad-Ali Aerâbi{% endblock %}</h1>
-  <p>{% block subtitle %}The Zuhauseseite and Lebenslauf{% endblock %}</p>
+  <h1>{% block h1 %}{{ page.h1 }}{% endblock %}</h1>
+  <p>{% block subtitle %}{{ page.subtitle }}{% endblock %}</p>
 </div>
 <div class="container-fluid text-center" id="summary">
   <p>
 	{% block quote %}
-    Veniet tempus, quo ista quae nunc latent, in lucem dies extrahat et longioris aevi diligentia
+    {{ page.quote }}
     {% endblock %}
   </p>
 </div>

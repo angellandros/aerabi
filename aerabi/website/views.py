@@ -22,7 +22,7 @@ def blog(request):
 def cv(request):
     from .models import Page
     page = Page.objects.get(url='cv')
-    return render(request, 'website/cv.html', context={'page': page})
+    return render(request, 'website/index.html', context={'page': page})
 
 
 def post(request, url):
@@ -34,4 +34,4 @@ def post(request, url):
 def works(request):
     from .models import Page
     page = Page.objects.get(url='works')
-    return render(request, 'website/works.html', context={'page': page})
+    return render(request, 'website/index.html', context={'page': page})

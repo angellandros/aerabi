@@ -15,6 +15,11 @@ class BlogPost(models.Model):
 
 class Page(models.Model):
     url = models.CharField(max_length=100, db_index=True, unique=True)
+    html_title = models.CharField(max_length=1000, default='Mohammad-Ali Aerâbi')
+    h1 = models.CharField(max_length=1000, default='Curriculum Vitæ')
+    subtitle = models.CharField(max_length=1000, default='Structured Presentation of Professional Experience')
+    quote = models.CharField(max_length=10000, default='Veniet tempus, quo ista quae nunc latent, in lucem dies '
+                                                       'extrahat et longioris aevi diligentia')
     text = models.TextField()
 
     def __str__(self):
