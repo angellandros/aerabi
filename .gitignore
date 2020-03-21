@@ -4,3 +4,5 @@ venv/
 aerabi/aerabi/__pycache__/
 .sqlite3
 
+/aerabi/db.sqlite3
+/aerabi/static/
