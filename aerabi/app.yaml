@@ -1,8 +1,13 @@
 runtime: python37
 
 handlers:
+- url: /
+  script: auto
 - url: /static/(.*)
   static_files: static/\1
   upload: static/(.*)
+- url: /style/(.*)
+  static_files: style/\1
+  upload: style/(.*)
 - url: /(.*)
   script: auto
